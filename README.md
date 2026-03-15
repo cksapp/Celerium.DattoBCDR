@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://Celerium.org"><img src="https://raw.githubusercontent.com/Celerium/Celerium.DattoBCDR/refs/heads/main/.github/images/Celerium_PoSHGallery_DattoBCDR.png" alt="_CeleriumBCDR" width="200"></a>
+  <a href="http://Celerium.org"><img src="https://raw.githubusercontent.com/Celerium/Celerium.DattoBCDR/refs/heads/main/.github/images/Celerium_PoSHGallery_DattoBCDR.png" width="200"></a>
   <br>
   Celerium_Celerium.DattoBCDR
   <br>
@@ -54,7 +54,7 @@ Whether you use this project, have learned something from it, or just like it, p
 
 ## About The Project
 
-The [Celerium.DattoBCDR](https://www.powershellgallery.com/packages/Celerium.DattoRMM) offers users the ability to extract data from Datto into third-party reporting tools and aims to abstract away the details of interacting with Datto's API endpoints in such a way that is consistent with PowerShell nomenclature. This gives system administrators and PowerShell developers a convenient and familiar way of using Datto's API to create documentation scripts, automation, and integrations.
+The [Celerium.DattoBCDR](https://www.powershellgallery.com/packages/Celerium.DattoBCDR) offers users the ability to extract data from Datto into third-party reporting tools and aims to abstract away the details of interacting with Datto's API endpoints in such a way that is consistent with PowerShell nomenclature. This gives system administrators and PowerShell developers a convenient and familiar way of using Datto's API to create documentation scripts, automation, and integrations.
 
 - :book: Project documentation can be found on [Github Pages](https://celerium.github.io/Celerium.DattoBCDR/)
 - :book: Datto's REST API documentation on their management portal [here](https://portal.dattobackup.com/integrations/api) *[ Requires a login ]*.
