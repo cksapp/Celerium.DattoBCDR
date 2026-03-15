@@ -1,0 +1,56 @@
+---
+title: Tracking CSV
+parent: Home
+nav_order: 2
+---
+
+# Tracking CSV
+
+When updating the documentation for this project, the tracking CSV plays a huge part in organizing of the markdown documents. Any new functions or endpoints should be added to the tracking CSV when publishing an updated module or documentation version
+
+{: .warning }
+I recommend downloading the CSV from the link provided rather then viewing the table below
+
+[Tracking CSV](https://github.com/Celerium/Celerium.DattoBCDR/blob/main/docs/Endpoints.csv)
+
+---
+
+## CSV markdown table
+
+| Category  | EndpointUri                                                    | Method                         | Function                        | Examples | Complete | Notes |
+|-----------|----------------------------------------------------------------|--------------------------------|---------------------------------|----------|----------|-------|
+| BCDR      | /bcdr/agent                                                    | GET                            | Get-DattoBCDRAgent              | YES      |          |       |
+| BCDR      | /bcdr/device                                                   | GET                            | Get-DattoBCDRDevice             | YES      |          |       |
+| BCDR      | /bcdr/device/{serialNumber}                                    | GET                            | Get-DattoBCDRDevice             | YES      |          |       |
+| BCDR      | /bcdr/device/{serialNumber}/alert                              | GET                            | Get-DattoBCDRAlert              | YES      |          |       |
+| BCDR      | /bcdr/device/{serialNumber}/asset                              | GET                            | Get-DattoBCDRAsset              | YES      |          |       |
+| BCDR      | /bcdr/device/{serialNumber}/asset/{volumeName}                 | GET                            | Get-DattoBCDRVolume             | YES      |          |       |
+| BCDR      | /bcdr/device/{serialNumber}/asset/agent                        | GET                            | Get-DattoBCDRAgent              | YES      |          |       |
+| BCDR      | /bcdr/device/{serialNumber}/asset/share                        | GET                            | Get-DattoBCDRShare              | YES      |          |       |
+| BCDR      | /bcdr/device/{serialNumber}/vm-restores                        | GET                            | Get-DattoBCDRVMRestore          | Yes      |          |       |
+| DTC       | /dtc/{clientId}/assets                                         | GET                            | Get-DattoBCDRDTCAsset           | YES      |          |       |
+| DTC       | /dtc/{clientId}/assets/{assetUuid}                             | GET                            | Get-DattoBCDRDTCAsset           | YES      |          |       |
+| DTC       | /dtc/agent/{agentUuid}/bandwidth                               | PUT                            | Set-DattoBCDRDTCBandwidth       | YES      |          |       |
+| DTC       | /dtc/assets                                                    | GET                            | Get-DattoBCDRDTCAsset           | YES      |          |       |
+| DTC       | /dtc/rmm-templates                                             | GET                            | Get-DattoBCDRDTCRMMTemplate     | YES      |          |       |
+| DTC       | /dtc/storage-pool                                              | GET                            | Get-DattoBCDRDTCStoragePool     | YES      |          |       |
+| Reporting | /report/activity-log                                           | GET                            | Get-DattoBCDRActivityLog        | YES      |          |       |
+| SaaS      | /saas/{SaasCustomerId}/{externalSubscriptionId}/bulkSeatChange | PUT                            | Set-DattoBCDRSaaSBulkSeatChange | YES      |          |       |
+| SaaS      | /saas/{sassCustomerId}/detailedBackupStats                     | GET                            | Get-DattoBCDRSaaSBackupStats    | YES      |          |       |
+| SaaS      | /sass/{sassCustomerId}/applications                            | GET                            | Get-DattoBCDRSaaSApplication    | YES      |          |       |
+| SaaS      | /sass/{sassCustomerId}/seats                                   | GET                            | Get-DattoBCDRSaaSSeat           | YES      |          |       |
+| SaaS      | /sass/domains                                                  | GET                            | Get-DattoBCDRSaaSDomain         | YES      |          |       |
+| Internal  | POST                                                           | Add-DattoBCDRAPIKey            | YES                             |          |          |       |
+| Internal  | POST                                                           | Add-DattoBCDRBaseURI           | YES                             |          |          |       |
+| Internal  | PUT                                                            | ConvertTo-DattoBCDRQueryString | YES                             |          |          |       |
+| Internal  | GET                                                            | Export-DattoBCDRModuleSettings | YES                             |          |          |       |
+| Internal  | GET                                                            | Get-DattoBCDRAPIKey            | YES                             |          |          |       |
+| Internal  | GET                                                            | Get-DattoBCDRBaseURI           | YES                             |          |          |       |
+| Internal  | GET                                                            | Get-DattoBCDRMetaData          | YES                             |          |          |       |
+| Internal  | GET                                                            | Get-DattoBCDRModuleSettings    | YES                             |          |          |       |
+| Internal  | GET                                                            | Import-DattoBCDRModuleSettings | YES                             |          |          |       |
+| Internal  | GET                                                            | Invoke-DattoBCDRRequest        | YES                             |          |          |       |
+| Internal  | DELETE                                                         | Remove-DattoBCDRAPIKey         | YES                             |          |          |       |
+| Internal  | DELETE                                                         | Remove-DattoBCDRBaseURI        | YES                             |          |          |       |
+| Internal  | DELETE                                                         | Remove-DattoBCDRModuleSettings | YES                             |          |          |       |
+| Internal  | GET                                                            | Test-DattoBCDRAPIKey           | YES                             |          |          |       |
