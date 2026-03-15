@@ -11,7 +11,7 @@ nav_order: 1
 
 <h1 align="center">
   <br>
-  <a href="http://Celerium.org"><img src="https://raw.githubusercontent.com/Celerium/Celerium.DattoBCDR/main/.github/images/Celerium_PoSHGallery_Celerium.DattoBCDR.png" alt="_CeleriumDemo" width="200"></a>
+  <a href="http://Celerium.org"><img src="https://raw.githubusercontent.com/Celerium/Celerium.DattoBCDR/refs/heads/main/.github/images/Celerium_PoSHGallery_DattoBCDR.png" alt="_CeleriumBCDR" width="200"></a>
   <br>
   Celerium_Celerium.DattoBCDR
   <br>
@@ -49,7 +49,7 @@ Whether you use this project, have learned something from it, or just like it, p
 <br />
 <div align="center">
   <a href="https://celerium.org">
-    <img src="https://raw.githubusercontent.com/Celerium/Celerium.DattoBCDR/main/.github/images/Celerium_PoSHGitHub_Celerium.DattoBCDR.png" alt="Logo">
+    <img src="https://raw.githubusercontent.com/Celerium/Celerium.DattoBCDR/refs/heads/main/.github/images/Celerium_PoSHGitHub_DattoBCDR.png" alt="Logo">
   </a>
 
   <p align="center">
@@ -65,7 +65,7 @@ Whether you use this project, have learned something from it, or just like it, p
 
 ## About The Project
 
-The [Celerium.DattoBCDR](https://www.datto.com/) offers users the ability to extract data from Datto into third-party reporting tools and aims to abstract away the details of interacting with Datto's API endpoints in such a way that is consistent with PowerShell nomenclature. This gives system administrators and PowerShell developers a convenient and familiar way of using Datto's API to create documentation scripts, automation, and integrations.
+The [Celerium.DattoBCDR](https://www.powershellgallery.com/packages/Celerium.DattoRMM) offers users the ability to extract data from Datto into third-party reporting tools and aims to abstract away the details of interacting with Datto's API endpoints in such a way that is consistent with PowerShell nomenclature. This gives system administrators and PowerShell developers a convenient and familiar way of using Datto's API to create documentation scripts, automation, and integrations.
 
 - :book: Project documentation can be found on [Github Pages](https://celerium.github.io/Celerium.DattoBCDR/)
 - :book: Datto's REST API documentation on their management portal [here](https://portal.dattobackup.com/integrations/api) *[ Requires a login ]*.
@@ -110,20 +110,14 @@ Get-Help Get-DattoBCDRDevice -Full
 
 ## Initial Setup
 
-After installing this module, you will need to configure both the *base URI* & *API access tokens* that are used to talk with the Datto API.
+After installing this module, you will need to configure the *API access tokens* that are used to talk with the Datto API.
 
-1. Run `Add-DattoBCDRBaseURI`
-   - By default, Datto's `https://api.datto.com/v1` URI is used.
-   - If you have your own API gateway or proxy, you may put in your own custom URI by specifying the `-BaseUri` parameter:
-      - `Add-DattoBCDRBaseURI -BaseUri http://myapi.gateway.celerium.org`
-      <br>
-
-2. Run `Add-DattoBCDRAPIKey -ApiKeyPublic 12345 -ApiKeySecret 123456789`
+1. Run `Add-DattoBCDRAPIKey -ApiKeyPublic 12345 -ApiKeySecret 123456789`
    - It will prompt you to enter your API access tokens if you do not specify them.
    - Datto API access tokens are generated via the Datto portal at *Admin > Integrations*
    <br>
 
-3. [**optional**] Run `Export-DattoBCDRModuleSettings`
+2. [**optional**] Run `Export-DattoBCDRModuleSettings`
    - This will create a config file at `%UserProfile%\Celerium.DattoBCDR` that holds the *base uri* & *API access tokens* information.
    - Next time you run `Import-Module -Name Celerium.DattoBCDR`, this configuration file will automatically be loaded.
    - :warning: Exporting module settings encrypts your API access tokens in a format that can **only be unencrypted by the user principal** that encrypted the secret. It makes use of .NET DPAPI, which for Windows uses reversible encrypted tied to your user principal. This means that you **cannot copy** your configuration file to another computer or user account and expect it to work.
