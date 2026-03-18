@@ -28,9 +28,9 @@ function Add-DattoBCDRAPIKey {
         public key & will then prompt to enter in the secret key
 
     .EXAMPLE
-        '12345' | Add-DattoBCDRAPIKey
+        ConvertTo-SecureString '12345' -AsPlainText | Add-DattoBCDRAPIKey
 
-        The Datto API will use the string entered as the secret key & will prompt to enter in the public key
+        The Datto API will use the secure string entered as the secret key & will prompt to enter in the public key
 
     .NOTES
         N\A
@@ -42,31 +42,21 @@ function Add-DattoBCDRAPIKey {
     [CmdletBinding()]
     [Alias('Set-DattoBCDRAPIKey')]
     Param (
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory = $true, HelpMessage = 'Please enter your API public key')]
         [ValidateNotNullOrEmpty()]
         [string]$ApiKeyPublic,
 
-        [Parameter(Mandatory = $false, ValueFromPipeline = $true)]
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
         [ValidateNotNullOrEmpty()]
-        [string]$ApiKeySecret
+        [securestring]$ApiKeySecret
     )
 
     begin {}
 
     process {
 
-        if ($ApiKeySecret) {
-            $SecureString = ConvertTo-SecureString $ApiKeySecret -AsPlainText -Force
-
-            Set-Variable -Name "DattoBCDRModuleApiKey" -Value $ApiKeyPublic -Option ReadOnly -Scope Global -Force
-            Set-Variable -Name "DattoBCDRModuleApiSecretKey" -Value $SecureString -Option ReadOnly -Scope Global -Force
-        }
-        else {
-            $SecureString = Read-Host -Prompt 'Please enter your API key:' -AsSecureString
-
-            Set-Variable -Name "DattoBCDRModuleApiKey" -Value $ApiKeyPublic -Option ReadOnly -Scope Global -Force
-            Set-Variable -Name "DattoBCDRModuleApiSecretKey" -Value $SecureString -Option ReadOnly -Scope Global -Force
-        }
+        Set-Variable -Name "DattoBCDRModuleApiKey" -Value $ApiKeyPublic -Option ReadOnly -Scope Global -Force
+        Set-Variable -Name 'DattoBCDRModuleApiSecretKey' -Value $ApiKeySecret -Option ReadOnly -Scope Global -Force
 
     }
 

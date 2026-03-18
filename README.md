@@ -101,7 +101,7 @@ Get-Help Get-DattoBCDRDevice -Full
 
 After installing this module, you will need to configure the *API access tokens* that are used to talk with the Datto API.
 
-1. Run `Add-DattoBCDRAPIKey -ApiKeyPublic 12345 -ApiKeySecret 123456789`
+1. Run `Add-DattoBCDRAPIKey -ApiKeyPublic 12345 -ApiKeySecret (ConvertTo-SecureString '123456789' -AsPlainText)`
    - It will prompt you to enter your API access tokens if you do not specify them.
    - Datto API access tokens are generated via the Datto portal at *Admin > Integrations*
    <br>
