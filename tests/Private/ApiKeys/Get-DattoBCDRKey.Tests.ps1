@@ -158,7 +158,7 @@ Describe "Testing [ $commandName ] function with [ $pester_TestName ]" -Tag @('A
             Add-DattoBCDRAPIKey -ApiKeyPublic '12345' -ApiKeySecret "Celerium.DattoBCDRAPIKey"
             $Keys = Get-DattoBCDRAPIKey -AsPlainText
             $Keys.PublicKey | Should -Be '12345'
-            $Keys.PublicKey | Should -Be "Celerium.DattoBCDRAPIKey"
+            $Keys.SecretKey | Should -Be "Celerium.DattoBCDRAPIKey"
         }
 
         It "If [ -ApiKeySecret ] is empty it should throw a warning" {
