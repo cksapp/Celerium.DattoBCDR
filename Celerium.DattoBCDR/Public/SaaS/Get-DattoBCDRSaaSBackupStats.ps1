@@ -4,14 +4,14 @@ function Get-DattoBCDRSaaSBackupStats {
         Gets detailed Saas backup data
 
     .DESCRIPTION
-        The Get-DattoBCDRBackupStats cmdlet gets detailed Saas
+        The Get-DattoBCDRSaaSBackupStats cmdlet gets detailed Saas
         backup data for a given customer
 
     .PARAMETER SaasCustomerId
         ID of the Datto SaaS organization
 
     .EXAMPLE
-        Get-DattoBCDRBackupStats -SaasCustomerId "123456"
+        Get-DattoBCDRSaaSBackupStats -SaasCustomerId "123456"
 
         Gets detailed Saas backup data for the defined customer
 

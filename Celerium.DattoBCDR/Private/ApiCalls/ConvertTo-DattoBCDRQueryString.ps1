@@ -4,11 +4,11 @@ function ConvertTo-DattoBCDRQueryString {
         Converts uri filter parameters
 
     .DESCRIPTION
-        The Invoke-DattoBCDRRequest cmdlet converts & formats uri filter parameters
+        The ConvertTo-DattoBCDRQueryString cmdlet converts & formats uri filter parameters
         from a function which are later used to make the full resource uri for
         an API call
 
-        This is an internal helper function the ties in directly with the
+        This is an internal helper function that ties in directly with the
         Invoke-DattoBCDRRequest & any public functions that define parameters
 
     .PARAMETER UriFilter

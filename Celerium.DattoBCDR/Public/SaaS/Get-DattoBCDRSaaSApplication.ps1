@@ -4,7 +4,7 @@ function Get-DattoBCDRSaaSApplication {
         Get Datto SaaS protection backup data for a given customer
 
     .DESCRIPTION
-        The Get-DattoBCDRApplication cmdlet gets Datto SaaS protection
+        The Get-DattoBCDRSaaSApplication cmdlet gets Datto SaaS protection
         backup data for a given customer
 
     .PARAMETER SaasCustomerId
@@ -14,13 +14,13 @@ function Get-DattoBCDRSaaSApplication {
         The number of days until the report should be generated
 
     .EXAMPLE
-        Get-DattoBCDRApplication -SaasCustomerId "123456"
+        Get-DattoBCDRSaaSApplication -SaasCustomerId "123456"
 
         Gets the Datto SaaS protection backup data from the define customer ID and
         does not include remote IDs
 
     .EXAMPLE
-        Get-DattoBCDRApplication -SaasCustomerId "123456" -DaysUntil 30
+        Get-DattoBCDRSaaSApplication -SaasCustomerId "123456" -DaysUntil 30
 
         Gets the Datto SaaS protection backup data from the define customer ID and
         includes reports that will generated in the next 30 days

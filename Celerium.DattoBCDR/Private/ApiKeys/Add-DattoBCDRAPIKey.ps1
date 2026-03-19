@@ -62,7 +62,7 @@ function Add-DattoBCDRAPIKey {
             Set-Variable -Name "DattoBCDRModuleApiSecretKey" -Value $SecureString -Option ReadOnly -Scope Global -Force
         }
         else {
-            $SecureString = Read-Host -Prompt 'Please enter your API key:' -AsSecureString
+            $SecureString = Read-Host -Prompt 'Please enter your API key' -AsSecureString
 
             Set-Variable -Name "DattoBCDRModuleApiKey" -Value $ApiKeyPublic -Option ReadOnly -Scope Global -Force
             Set-Variable -Name "DattoBCDRModuleApiSecretKey" -Value $SecureString -Option ReadOnly -Scope Global -Force

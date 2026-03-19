@@ -5,11 +5,11 @@ function Get-DattoBCDRSaaSDomain {
         domains are being protected
 
     .DESCRIPTION
-        The Get-DattoBCDRDomain cmdlet gets SaaS protection data
+        The Get-DattoBCDRSaaSDomain cmdlet gets SaaS protection data
         about what domains are being protected
 
     .EXAMPLE
-        Get-DattoBCDRDomain
+        Get-DattoBCDRSaaSDomain
 
         Gets SaaS protection data about what domains are being protected
 

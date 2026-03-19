@@ -4,7 +4,7 @@ function Set-DattoBCDRSaaSBulkSeatChange {
         Sets Datto SaaS Protection bulk seat changes
 
     .DESCRIPTION
-        The Set-DattoBCDRBulkSeatChange cmdlet is used to bulk set SaaS
+        The Set-DattoBCDRSaaSBulkSeatChange cmdlet is used to bulk set SaaS
         Protection seat changes
 
     .PARAMETER SaasCustomerId
@@ -14,7 +14,7 @@ function Set-DattoBCDRSaaSBulkSeatChange {
         Defines the external Subscription ID used to set SaaS bulk seat changes
 
         The ExternalSubscriptionId can be found by referencing
-        the data returned from Get-DattoBCDRApplication
+        the data returned from DattoBCDRSaaSDomain
 
         Example:
             'Classic:Office365:654321'
@@ -25,7 +25,7 @@ function Set-DattoBCDRSaaSBulkSeatChange {
 
         This is a case-sensitive value
 
-        Seat Types can be found by referencing the data returned from Get-DattoBCDRSeat
+        Seat Types can be found by referencing the data returned from Get-DattoBCDRSaaSSeat
 
         Example:
             Office365: 'User', 'SharedMailbox', 'Site', 'TeamSite', 'Team'
@@ -46,18 +46,18 @@ function Set-DattoBCDRSaaSBulkSeatChange {
     .PARAMETER RemoteId
         Defines the comma separated target IDs to change
 
-        Remote IDs can be found by referencing the data returned from Get-DattoApplication
+        Remote IDs can be found by referencing the data returned from Get-DattoBCDRSaaSSeat
 
         Example:
             ab23-bdf234-1234-asdf
 
     .EXAMPLE
-        Set-DattoBCDRBulkSeatChange -SaasCustomerId "123456" -ExternalSubscriptionId 'Classic:Office365:654321' -SeatType "User" -ActionType License -RemoteId "ab23-bdf234-1234-asdf"
+        Set-DattoBCDRSaaSBulkSeatChange -SaasCustomerId "123456" -ExternalSubscriptionId 'Classic:Office365:654321' -SeatType "User" -ActionType License -RemoteId "ab23-bdf234-1234-asdf"
 
         Sets the Datto SaaS protection seats from the defined Office365 customer ID
 
     .EXAMPLE
-        Set-DattoBCDRBulkSeatChange -SaasCustomerId "123456" -ExternalSubscriptionId 'Classic:GoogleApps:654321' -SeatType "SharedDrive" -ActionType Pause -RemoteId "ab23-bdf234-1234-asdf"
+        Set-DattoBCDRSaaSBulkSeatChange -SaasCustomerId "123456" -ExternalSubscriptionId 'Classic:GoogleApps:654321' -SeatType "SharedDrive" -ActionType Pause -RemoteId "ab23-bdf234-1234-asdf"
 
         Sets the Datto SaaS protection seats from the defined Google customer ID
 

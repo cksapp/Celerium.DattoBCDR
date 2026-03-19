@@ -4,7 +4,7 @@ function Get-DattoBCDRSaaSSeat {
         Get Datto SaaS protection seats for a given customer
 
     .DESCRIPTION
-        The Get-DattoBCDRSeat cmdlet gets Datto SaaS protection seats
+        The Get-DattoBCDRSaaSSeat cmdlet gets Datto SaaS protection seats
         for a given customer
 
     .PARAMETER SaasCustomerId
@@ -17,7 +17,7 @@ function Get-DattoBCDRSaaSSeat {
         'User', 'Site', 'TeamSite', 'SharedMailbox', 'Team', 'SharedDrive'
 
     .EXAMPLE
-        Get-DattoBCDRSeat -SaasCustomerId "123456"
+        Get-DattoBCDRSaaSSeat -SaasCustomerId "123456"
 
         Gets the Datto SaaS protection seats from the define customer id
 
