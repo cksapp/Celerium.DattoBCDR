@@ -154,6 +154,13 @@ Describe "Testing [ $commandName ] function with [ $pester_TestName ]" -Tag @('A
             (Get-DattoBCDRAPIKey -AsPlainText).SecretKey | Should -BeOfType String
         }
 
+        It "Using [ -AsPlainText ] should return the API keys entered" {
+            Add-DattoBCDRAPIKey -ApiKeyPublic '12345' -ApiKeySecret "Celerium.DattoBCDRAPIKey"
+            $Keys = Get-DattoBCDRAPIKey -AsPlainText
+            $Keys.PublicKey | Should -Be '12345'
+            $Keys.SecretKey | Should -Be "Celerium.DattoBCDRAPIKey"
+        }
+
         It "If [ -ApiKeySecret ] is empty it should throw a warning" {
             Remove-DattoBCDRAPIKey
             Get-DattoBCDRAPIKey -WarningAction SilentlyContinue -WarningVariable apiKeyWarning

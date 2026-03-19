@@ -1,7 +1,7 @@
 ---
 parent: Home 
 Module Name: Celerium.DattoBCDR
-Module Guid: c128e2d8-4d4c-48cc-8a9b-12457e57d1dd
+Module Guid: c128e2d8-4d4c-48cc-8a9b-12457e57d1dd c128e2d8-4d4c-48cc-8a9b-12457e57d1dd
 Download Help Link: https://celerium.github.io/Celerium.DattoBCDR/docs/cab
 Help Version: 1.0.0.0
 Locale: en-US
